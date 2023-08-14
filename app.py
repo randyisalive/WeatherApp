@@ -2,7 +2,6 @@ from flask import Flask, render_template, redirect, jsonify, request, url_for
 import requests
 import datetime
 import json
-from flask_debugtoolbar import DebugToolbarExtension
 
 
 app = Flask(__name__)
@@ -10,7 +9,7 @@ app.secret_key = "1"
 app.debug = True
 
 
-API_KEY = "bbb0ee88f6364524908234959231308"
+API_KEY = "bbb0ee88f6364524908234959231308" # my API key
 
 @app.route('/', methods=['POST','GET'])
 def index():
@@ -31,10 +30,7 @@ def index():
     datas = request.args.get("data")
     if datas:
         corrected_data_str = datas.replace("'", "\"")
-        try:
-            data = json.loads(corrected_data_str)
-        except json.JSONDecodeError as e:
-            return f"Invalid JSON : {e}"
+        data = json.loads(corrected_data_str)
     with open('./country.json', 'r') as json_file:
         dataJSON = json.load(json_file)
     if request.method == 'POST':
