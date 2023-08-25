@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+:root {
+  --malibu-sun: #fff3da;
+  --foggy-health: #dfccfb;
+  --lavender-tonic: #d0bfff;
+  --whitespring-lilac: #beadfa;
+}
+
+.navbar {
+  background-color: var(--malibu-sun);
+  margin: 0;
+  padding: 0;
+}
+
+.time-container {
+  display: flex;
+  background-color: var(--malibu-sun);
+  justify-content: flex-end;
+  padding-right: 2.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poiret One;
+}
+.container {
+  background-color: var(--malibu-sun);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

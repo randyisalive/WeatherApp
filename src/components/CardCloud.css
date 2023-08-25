@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-top: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+}
+
+.cloud {
+  background-color: #fafafa;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: weathericons;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 100px;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.cloud img {
+  width: 10rem;
+}
+.data-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-size: 100px;
+}
+
+.data {
+  padding-top: 0.5rem;
+  padding-left: 2.5rem;
+  display: flex;
+  width: 85%;
+  background-color: var(--lavender-tonic);
+  border-bottom-left-radius: 20px;
+}
+
+.data-weather {
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 100;
+  text-transform: uppercase;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.location {
+  font-size: 15px !important;
+}
+.date {
+  font-size: 30px;
+  background-color: var(--foggy-health);
+  border-bottom-right-radius: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 800;
+}
