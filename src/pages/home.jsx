@@ -15,7 +15,7 @@ function time() {
 
 function Home() {
   const [data, setData] = useState([]);
-  const [select, setSelect] = useState("");
+  const [select, setSelect] = useState("Indonesia");
   const [isLoading, setLoading] = useState(false);
   const [date, setDate] = useState(null);
 
@@ -24,15 +24,14 @@ function Home() {
       .then((response) => response.json()) // Added parentheses here
       .then((jsonData) => {
         setData(jsonData);
-        // eslint-disable-next-line no-constant-condition
+        if (!jsonData) {
+          console.log("Empty Data");
+        }
         if (data) {
           setLoading(true);
-          console.log("Loading State: " + isLoading + " data: " + jsonData.length);
         } else {
           setLoading(false);
-          console.log("Loading State: " + isLoading + " data: " + data.length);
         }
-        console.log(data);
       })
       .catch((error) => {
         console.log(error + "This error");
@@ -57,7 +56,6 @@ function Home() {
       <div className="navbar">
         <div className="time-container">
           <h1>{date}</h1>
-          {console.log(data["current"]["temp_c"])}
         </div>
       </div>
       <div className="container">
@@ -81,7 +79,7 @@ function Home() {
                 setSelect(e.target.value);
               }}
             >
-              <option value="">Select Country Below: </option>
+              <option value="null">Select Country Below: </option>
               {COUNTRY_LIST.map((items) => {
                 return (
                   <option key={items.code} value={items.name}>
