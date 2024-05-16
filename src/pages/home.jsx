@@ -20,7 +20,12 @@ function Home() {
   const [date, setDate] = useState(null);
 
   useEffect(() => {
-    fetch("http://api.weatherapi.com/v1/current.json?key=" + API_KEY + "&q=" + select)
+    fetch(
+      "http://api.weatherapi.com/v1/current.json?key=" +
+        API_KEY +
+        "&q=" +
+        select
+    )
       .then((response) => response.json()) // Added parentheses here
       .then((jsonData) => {
         setData(jsonData);
