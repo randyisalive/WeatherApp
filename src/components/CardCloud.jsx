@@ -1,3 +1,4 @@
+import Loading from "../pages/Loading";
 import "./CardCloud.css";
 
 function getDate() {
@@ -21,21 +22,34 @@ function getDate() {
   return date + " " + month;
 }
 
-function CardCloud(props) {
+function CardCloud({
+  imgCloud,
+  temperature,
+  conditionText,
+  country,
+  region,
+  isLoading_1,
+}) {
   return (
     <div className="card">
       <div className="cloud">
-        <img src={props.imgCloud} alt="" />
+        <img src={imgCloud} alt="" />
       </div>
       <div className="data-container">
         <div className="data">
-          <span>{props.temperature}°C</span>
-          <div className="data-weather">
-            <span>{props.conditionText}</span>
-            <span className="location">
-              {props.country}, {props.region}
-            </span>
-          </div>
+          {isLoading_1 ? (
+            <Loading />
+          ) : (
+            <>
+              <span>{temperature}°C</span>
+              <div className="data-weather">
+                <span>{conditionText}</span>
+                <span className="location">
+                  {country}, {region}
+                </span>
+              </div>
+            </>
+          )}
         </div>
         <div className="date">
           <span>{getDate()}</span>

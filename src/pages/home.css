@@ -24,6 +24,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: Poiret One;
+  
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 .container {
   background-color: var(--malibu-sun);

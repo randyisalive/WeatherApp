@@ -35,6 +35,7 @@
   padding-left: 2.5rem;
   display: flex;
   width: 85%;
+  min-height: 100%;
   background-color: var(--lavender-tonic);
   border-bottom-left-radius: 20px;
 }
