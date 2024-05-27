@@ -1,0 +1,79 @@
+.card-phone-container {
+    background-color: var(--lavender-tonic);
+    border-radius: 20px;
+    display: flex;
+    max-width: 300px;
+    width: 100%;
+    flex-direction: column;
+    box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+
+}
+
+.weather-image-phone-container {
+    background-color: #fafafa;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+
+#condition-container {
+    text-transform: uppercase;
+}
+
+#time-container {
+    margin-bottom: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    
+}
+
+#left-container {
+    gap: 1.3rem;
+    padding: 0.4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-container {
+    background-color: var(--foggy-health);
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+}
+
+#celcius {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.weather-image {
+    width: 100px;
+    
+}
+
+.p-2 {
+    padding: 2rem;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}

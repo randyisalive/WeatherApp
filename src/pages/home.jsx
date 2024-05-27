@@ -6,14 +6,7 @@ import { COUNTRY_LIST } from "../CountryList";
 import Loading from "./Loading";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import useWeatherData from "../function/useWeatherData";
-
-function time() {
-  const dateObj = new Date();
-  const hour = dateObj.getHours();
-  const min = dateObj.getMinutes();
-  const time = hour + ":" + min;
-  return time;
-}
+import time from "../function/time";
 
 function Home() {
   const { data, select, setSelect, isLoading, isloading_1 } = useWeatherData();
